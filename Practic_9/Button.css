@@ -1,0 +1,17 @@
+button{
+    background-color: white;
+}
+
+
+.follow-cursor {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #0d6efd;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 999;
+    pointer-events: none;
+    background-color: #FF4364;
+}

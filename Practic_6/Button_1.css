@@ -1,0 +1,75 @@
+.button_1{
+    padding: 0;
+    position: relative;
+    background: black;
+    transition:800ms ease background;
+}
+
+.button_1::after, .button_1::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width:0;
+    background: #FF4364;
+    transition:400ms ease all;
+}
+
+.button_1::after{
+    top:inherit;
+    right: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.button_1:hover:before,
+.button_1:hover:after{
+    width:100%;
+    transition:800ms ease all;
+}
+
+.button_1 span{
+    position: relative;
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 1rem;
+}
+
+.button_1 span::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 2px;
+    background: #FF4364;
+    transition:400ms ease all;
+}
+
+.button_1 span::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 0;
+    width: 2px;
+    background: #FF4364;
+    transition:400ms ease all;
+}
+
+
+.button_1 span:hover::before, span:hover::after{
+    height: 100%;
+    transition:800ms ease all;
+}
+
+.button_1:hover{
+    cursor: pointer;
+    background: white;
+    box-shadow: -1px -1px 5px 0px #fff,
+    7px 7px 20px 0px #0003,
+    4px 4px 5px 0px #0002;
+    transition:400ms ease background;
+}

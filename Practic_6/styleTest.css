@@ -1,0 +1,237 @@
+body{
+    font-family: 'Exo 2', sans-serif;
+    font-size: 20px;
+    overflow-x: hidden;
+}
+
+.divButton{
+    display: flex;
+    justify-content: space-around;
+}
+
+.divButton button{
+    color: #FF4364;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 0;
+}
+
+.ann{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: max-content;
+}
+
+.infoText{
+    margin: 5%;
+    padding-bottom: 3%;
+    z-index: -1;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    opacity: 0;
+    top: 0;
+    width: 400px;
+    height: 388px;
+    border-radius: 5px;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(124,113,117,1) 69%);
+    transition: 0.5s all ease-out;
+}
+
+.infoImg{
+    margin: 5%;
+    z-index: 1;
+    border-radius: 10px;
+    opacity: 1;
+    transition: 0.5s ease-out all;
+}
+
+.infoImg:hover{
+    z-index: -1;
+    opacity: 0.25;
+    transition: 2s all ease;
+    box-shadow: -1px -1px 5px 0px #fff,
+    7px 7px 20px 0px #0006,
+    4px 4px 5px 0px #0002;
+}
+
+.info:hover .infoImg{
+    z-index: -1;
+    transition: 0.5s all ease-out;
+}
+
+.info:hover .infoText{
+    z-index: 1;
+    opacity: 0.89;
+    transition: 0.5s all ease;
+}
+
+.info{
+    width: max-content;
+    position: relative;
+}
+
+.infoVideo{
+    position: relative;
+    z-index: 1;
+    width: 60%;
+    margin: 2%;
+}
+
+.Video{
+    border-radius: 10px;
+}
+
+.VideoText{
+    border-radius: 10px;
+    color: #FF4364;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5%;
+    background: black;
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    top: 25%;
+    left: -10%;
+    transition: 1s all ease-out;
+}
+
+.Video:hover + .VideoText{
+    opacity: 1;
+    transition: 1s all ease;
+}
+
+.VideoText:hover{
+    opacity: 1;
+}
+
+.Menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px 10px rgba(18, 28, 35, 0.38);
+}
+
+.MenuText{
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 200px;
+    height: 150px;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: white;
+    border-radius: 0 0 10px 10px;
+    visibility: hidden;
+}
+
+.MenuText p{
+    margin: 5%;
+    border: 2px solid #FF4364;
+    border-radius: 5px;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.Menu::after{
+    content:url("bell-black.svg");
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.Menu::before{
+    content: "5";
+    display: flex;
+    justify-content: center;
+    color:white;
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    top: -13px;
+    right: -13px;
+    background: #FF4364;
+    border-radius: 26px;
+}
+
+.Menu:not(:hover){
+    animation: Menu_anim_rev 1s normal forwards;
+}
+
+.Menu:hover{
+    background: black;
+    animation: Menu_anim 1s normal forwards;
+}
+
+.Menu:hover .MenuText{
+    visibility: visible;
+    opacity: 1;
+    transition: 1s all ease;
+}
+
+.Menu:hover .MenuText{
+    transition: 1s all;
+}
+
+.Menu:hover .MenuText p{
+    transition: 0.5s all;
+}
+
+.Menu:hover .MenuText p:hover{
+    background: #FF4364;
+    color: white;
+    transition: 0.5s all;
+}
+
+.Menu:hover::after{
+    content:url("bell-white.svg");
+}
+
+.ann{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@keyframes Menu_anim{
+    from{
+        width: 50px;
+        height: 50px;
+        background: white;
+    }
+    to{
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        background: black;
+    }
+}
+
+@keyframes Menu_anim_rev{
+    from{
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        background: black;
+    }
+    to{
+        width: 50px;
+        height: 50px;
+        background: white;
+    }
+}

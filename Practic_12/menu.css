@@ -1,0 +1,99 @@
+.Menu{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px 10px rgba(18, 28, 35, 0.38);
+    transition: all 0.5s;
+}
+
+.MenuText{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 200px;
+    height: 150px;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: white;
+    border-radius: 0 0 10px 10px;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.MenuText p{
+    margin: 5%;
+    border: 2px solid #FF4364;
+    border-radius: 5px;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.Menu::after{
+    content:url("bell-black.svg");
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+#count{
+    display: flex;
+    justify-content: center;
+    color:white;
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    top: -13px;
+    right: -13px;
+    background: #FF4364;
+    border-radius: 26px;
+}
+
+.Menu:hover{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 10px rgba(18, 28, 35, 0.38);
+    transition: all 0.5s;
+    background: black;
+}
+
+.Menu:hover .MenuText{
+    visibility: visible;
+    opacity: 1;
+    transition: 1s all ease;
+}
+
+.Menu:hover .MenuText{
+    transition: 1s all;
+}
+
+.Menu:hover .MenuText p{
+    transition: 0.5s all;
+}
+
+.Menu:hover .MenuText p:hover{
+    background: #FF4364;
+    color: white;
+    transition: 0.5s all;
+}
+
+.Menu:hover::after{
+    content:url("bell-white.svg");
+}
+
+#conteiner{
+    overflow-y: auto;
+}

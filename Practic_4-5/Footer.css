@@ -1,0 +1,160 @@
+.Footer{
+    position: relative;
+    background-color: black;
+    height: 10rem;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Address{
+    color: #FF4364;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.Address a{
+    color: darkgrey;
+    transition: all 0.5s;
+}
+
+.Address a:hover{
+    color: #FF4364;
+    transition: all 0.5s;
+}
+
+.ImgTg{
+    background-image: url("Images/tg.svg");
+    height: 48px;
+    width: 48px;
+    margin: 2%;
+}
+
+.ImgVk{
+    background-image: url("Images/vk.svg");
+    height: 48px;
+    width: 48px;
+    margin: 2%;
+}
+
+.ImgTen{
+    background-image: url("Images/tenchat.svg");
+    height: 48px;
+    width: 48px;
+    margin: 2% 0 2% 2%;
+}
+
+.Connect{
+    width: max-content;
+    grid-area: content;
+
+    margin-bottom: 1rem;
+}
+
+.Connect .connectImg:hover{
+    cursor: pointer;
+}
+
+.connectImg{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.NavigationFoot{
+    color: darkgrey;
+    display: flex;
+    flex-direction: column;
+
+    grid-area: navigat;
+}
+
+.NavigationFoot a{
+    margin: 1%;
+    transition: all 0.5s;
+}
+
+.NavigationFoot a:hover{
+    color: #FF4364;
+    transition: all 0.5s;
+}
+
+.NavigationFootTitle{
+    color: #FF4364;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.FooterContent{
+    display: grid;
+    width: 90%;
+    height: 70%;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 70%;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: flex-start;
+
+    grid-template-areas: "adress pup navigat content";
+}
+
+@media (min-width: 769px) and (max-width: 1000px){
+
+    .Footer{
+        height: 15rem;
+    }
+
+    .FooterContent{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50% 50%;
+
+    }
+
+    .Connect{
+        grid-area: 2 / 1 / 3 / 3;
+        justify-content: center;
+        margin-top: 3%;
+    }
+
+    .NavigationFoot{
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .connectImg{
+        justify-content: center;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px){
+    .Footer{
+        height: 19rem;
+    }
+
+    .FooterContent{
+        grid-template-columns: max-content;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: max-content;
+        justify-items: flex-start;
+        align-items: center;
+    }
+
+    .Connect{
+        grid-area: 3 / 1 / 4 / 2;
+        justify-content: center;
+        margin-top: 3%;
+    }
+
+    .NavigationFoot{
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .connectImg{
+        justify-content: space-between;
+    }
+
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type = "image/jpg" href = "../Images/Логотип.svg">
+    <link rel="stylesheet" href ="Header_min.css">
+    <link rel="stylesheet" href ="main.css">
+    <link rel="stylesheet" href ="Footer.css">
+    <link rel="stylesheet" href ="animations.css">
+    <link rel="stylesheet" href ="Reg.css">
+    <link rel="stylesheet" href ="Button_2.css">
+    <link rel="stylesheet" href ="Header_burger.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Регистрация</title>
+</head>
+<body>
+
+    <header class = "Header">
+        <a class ="Logo" href="../../index.html">
+            <img class="ImgLogo" src="../Images/Логотип.svg" width="40" height="40">
+            Электросамокаты
+        </a>
+
+        <div class="Navigation">
+            <a href="../../index.html">Главная</a>
+            <a href="../ Catalog/Catalog_page.html">Каталог</a>
+            <a href="../ Favorites/Favorites_page.html">Избранное</a>
+        </div>
+
+        <a class = "Login" href="../Sing_In/Sing_In.html">
+            <img src="../Images/Login.svg">
+            Войти
+        </a>
+    </header>
+
+    <header class = "HeaderWithBurger">
+        <div class="BurgerOpen">
+            <a class ="Logo" href="../../index.html">
+                <img class="ImgLogo" src="../Images/Логотип.svg" width="40" height="40">
+                <p id="HeaderLogo">Электросамокаты</p>
+            </a>
+
+            <img class="BurgerImg" src="../Images/Burger.svg">
+        </div>
+
+        <div class="Burger">
+            <a href="../../index.html">Главная</a>
+            <a href="../%20Catalog/Catalog_page.html">Каталог</a>
+            <a href="../%20Favorites/Favorites_page.html">Избранное</a>
+            <a href="../Sing_In/Sing_In.html">Войти</a>
+        </div>
+    </header>
+
+    <div class ="blockPage">
+
+        <form action="../../index.html" class = "divForm">
+            <div class="FormContain">
+                <h3 class="line_2">Регистрация</h3>
+
+                <div class="divInput">
+                    <input type="text" placeholder=" Логин" name="nameInput" class="inputName" id ="nameInput">
+
+                    <input type="email" placeholder=" Почта" name="emailInput" class="inputEmail" id="emailInput">
+
+                    <input type="password" placeholder=" Пароль" name="passwordInput" class="inputPassword" id = "passwordInput">
+
+                    <input type="password" placeholder=" Подтвердите пароль" name="passwordInput" class="inputPassword" id = "passwordConInput"/>
+                </div>
+                <div class ="divButton">
+                    <button formtarget="../../index.html" class = "button_2" type="submit">Зарегестрироваться</button>
+                </div>
+                <div class="SingIN">
+                    <p>Уже зарегестрированны?</p>
+                    <a href="../Sing_In/Sing_In.html">Войдите</a>
+                </div>
+            </div>
+        </form>
+
+        <div class ="blockImg">
+            <img src="Самокаты/самокат1.png" width="400" height="400">
+            <img src="Самокаты/самокат2.png" width="400" height="400">
+            <img src="Самокаты/самокат3.png" width="400" height="400">
+            <img src="Самокаты/самокат4.png" width="400" height="400">
+            <img src="Самокаты/самокат5.png" width="400" height="400">
+            <img src="Самокаты/самокат6.png" width="400" height="400">
+            <img src="Самокаты/самокат7.png" width="400" height="400">
+            <img src="Самокаты/самокат8.png" width="400" height="400">
+            <img src="Самокаты/самокат9.png" width="400" height="400">
+            <img src="Самокаты/самокат10.png" width="400" height="400">
+            <img src="Самокаты/самокат11.png" width="400" height="400">
+            <img src="Самокаты/самокат12.png" width="400" height="400">
+        </div>
+    </div>
+
+    <footer class="Footer">
+        <div class="FooterContent">
+            <div class = "Address">
+                <p class="NavigationFootTitle">&copy Николай Жариков</p>
+                <i><a href="tel:01234567890">+7-111-228-00-55</a></i>
+                <i><a href="mailto:vanavnavvnawad@mail.com">nikolay@gmail.com</a></i>
+            </div>
+
+            <div class="NavigationFoot">
+                <p class="NavigationFootTitle">Карта сайта</p>
+                <a href="../../index.html">Главная</a>
+                <a href="../ Catalog/Catalog_page.html">Каталог</a>
+                <a href="../ Favorites/Favorites_page.html">Избранное</a>
+            </div>
+
+            <div class="Connect">
+                <p class="NavigationFootTitle">Связаться с нами</p>
+                <div class="connectImg">
+                    <div class="ImgVk"></div>
+                    <div class="ImgTg"></div>
+                    <div class="ImgTen"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../BurgerMenu.js"></script>
+</body>
+</html>
